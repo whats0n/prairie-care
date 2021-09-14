@@ -1,0 +1,1 @@
+(()=>{"use strict";document.body.classList.toggle("is-touch","ontouchstart"in window)})();
