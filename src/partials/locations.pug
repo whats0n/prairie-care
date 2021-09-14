@@ -1,0 +1,22 @@
+.locations
+  .container
+    .locations__title
+      | Psychiatry position openings within multiple locations:
+    ul.locations__items
+      -
+        var items = [
+          { title: 'Maplewood', meta: 'Psychiatrist' },
+          { title: 'Chaska', meta: 'Psychiatrist' },
+          { title: 'Rochester', meta: 'Psychiatrist - Child & Adolescent ' },
+          { title: 'Mankato', meta: 'Psychiatrist - Child & Adolescent ' },
+          { title: 'Edina', meta: 'Psychiatrist' },
+          { title: 'Brooklyn Park', meta: 'Psychiatrist' },
+          { title: 'Rochester', meta: 'Adult Psychiatrist ' }
+        ]
+      each item in items
+        li.locations__item
+          a.locations__item-link(href="#")
+            .locations__subtitle
+              | #{item.title}
+            .locations__meta
+              | #{item.meta}

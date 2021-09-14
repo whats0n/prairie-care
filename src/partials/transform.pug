@@ -1,0 +1,22 @@
+.transform
+  .container
+    .transform__inner
+      .transform__title
+        strong Help us transform
+        em  psychiatric care.
+      .transform__row
+        .transform__col.transform__text
+          p Our vision is to transform psychiatric healthcare by providing hope, healing, and better care outcomes for everyone. And that all starts with you. At PrairieCare, you help individuals heal each and every day—improving lives by reshaping mental healthcare for good.
+          p PrairieCare Medical Group is a formal affiliate of the University of Minnesota Medical School and the premiere training site for physicians in the child psychiatry fellowship program. We apply innovative practices not offered in other hospitals to improve the quality of care and patient/family experience.
+        .transform__col
+          -
+            var items = [
+              'Join a trusted organization with over 700 staff and 200+ clinicians.',
+              'Grow professionally with multiple opportunities for new roles and fulfilling work.',
+              'Contribute to a dedicated, diverse team committed to outstanding patient outcomes.',
+              'Help shape and transform the future of psychiatric healthcare.'
+            ]
+          ul.transform__list
+            each item in items
+              li.transform__list-item
+                | #{item}

@@ -1,0 +1,38 @@
+@mixin hover($notActive: true) {
+  @include is-touch(false) {
+    @if $notActive {
+      &:hover:not(:active) {
+        @content;
+      }
+    } @else {
+      &:hover {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}
+
+@mixin focus {
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin disabled($isDisabled: true) {
+  @if ($isDisabled) {
+    &:disabled,
+    &[disabled] {
+      @content;
+    }
+  } @else {
+    &:not(:disabled):not([disabled]) {
+      @content;
+    }
+  }
+}

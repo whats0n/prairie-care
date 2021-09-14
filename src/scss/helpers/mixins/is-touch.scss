@@ -1,0 +1,11 @@
+@mixin is-touch($state: true) {
+  @if ($state) {
+    body.is-touch & {
+      @content;
+    }
+  } @else {
+    body:not(.is-touch) & {
+      @content;
+    }
+  }
+}

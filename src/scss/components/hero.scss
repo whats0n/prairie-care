@@ -1,0 +1,156 @@
+.hero {
+  color: #fff;
+  background: #377893;
+
+  &__inner {
+    position: relative;
+
+    @include media($from: 'sm') {
+      padding: 210px 0 110px;
+      min-height: 792px;
+    }
+
+    @include media($to: 'sm') {
+      padding: 102px 0 40px;
+    }
+  }
+
+  &__figure {
+    @include media($from: 'sm') {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 52px 6px 0 0;
+      width: math.div(680, 1400) * 100%;
+    }
+
+    @include media($to: 'sm') {
+      margin: 0 auto 29px;
+      width: math.div(296, 345) * 100%;
+      max-width: 400px;
+    }
+  }
+
+  &__figure-in,
+  &__figure:before {
+    $size: math.div(532, 674) * 100%;
+
+    overflow: hidden;
+    border-radius: 50%;
+    width: $size;
+    padding-top: $size;
+  }
+
+  &__figure:before {
+    content: '';
+    display: block;
+    margin-left: auto;
+    background: #d9531e;
+  }
+
+  &__figure-in {
+    position: relative;
+    margin-top: math.div(-377, 680) * 100%;
+    background: #e7943e;
+    overflow: hidden;
+  }
+
+  &__image-wrap {
+    position: absolute;
+    left: math.div(142, 532) * 100%;
+    bottom: math.div(158, 532) * 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    position: absolute;
+    left: math.div(-38, 532) * 100%;
+    bottom: 0;
+    width: 81%;
+  }
+
+  &__primary,
+  &__secondary {
+    @include media($from: 'sm') {
+      padding-right: 40px;
+      width: math.div(1400 - 680, 1400) * 100%;
+      max-width: 623px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 30px;
+    font-family: var(--font-tertiary);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 0.54px;
+
+    @include media($to: 'md') {
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.48px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 68px;
+
+    @include media($to: 'md') {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+
+    em {
+      font-family: var(--font-secondary);
+    }
+  }
+
+  &__text {
+    margin-bottom: 26px;
+    font-size: 16px;
+    line-height: 28px;
+
+    @include media($to: 'md') {
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 28px;
+
+      @include media($to: 'md') {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -15px;
+
+    @include media($to: 'sm') {
+      margin: -10px;
+    }
+  }
+
+  &__button {
+    margin: 15px;
+
+    @include media($to: 'sm') {
+      margin: 10px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.benefits
+  .container
+    .benefits__title
+      | Employee Benefits
+    -
+      var items = [
+        {
+          title: 'Health',
+          list: [
+            'Employee & Dependent Health Insurance Plans',
+            'Life Insurance',
+            'Short-term & Long-term Disability Plans',
+            'Health Savings Account',
+            'Employee Assistance Program',
+            'Employee Fitness Discount'
+          ]
+        },
+        {
+          title: 'Financial',
+          list: [
+            'Generous Paid Time Off (PTO) Plans',
+            'Retirement Savings Plans',
+            'Flexible Spending Accounts',
+            'Personal Financial Education & Planning Services',
+            'Employee Discounts'
+          ]
+        },
+        {
+          title: 'Career Growth',
+          list: [
+            'Education Tuition Reimbursement',
+            'Service Awards & Recognition',
+            'Education & Training Opportunities',
+            'Staff Coaching & Mentoring Programs'
+          ]
+        }
+      ]
+    .benefits__row
+      each item in items
+        .benefits__col
+          .benefits__subtitle
+            | #{item.title}
+          ul.benefits__list
+            each string in item.list
+              li.benefits__list-item #{string}

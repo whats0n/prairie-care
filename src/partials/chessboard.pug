@@ -1,0 +1,36 @@
+.chessboard
+  .container-fluid
+    .chessboard__items
+      -
+        var items = [
+          {
+            image: './images/mission.jpg',
+            title: 'Our Mission & Values',
+            content: [
+              'Our values shape every aspect of our work—and support our mission to provide every individual patient the psychiatric care they truly need.',
+              '<strong>Respect</strong> for the intrinsic value of patients and their families.',
+              '<strong>Ethical care</strong> through scientific understanding and compassionate spirit.',
+              '<strong>Attentive collaboration</strong> with patients, families, and colleagues.',
+              '<strong>Living these values</strong> with patients and each other day by day.'
+            ]
+          },
+          {
+            image: './images/diversity-inclusion.jpg',
+            title: 'Diversity & Inclusion',
+            content: [
+              'PrairieCare welcomes and values the diversity of our patients, families, and teams. We thrive on differences—and seek to develop talented people across a variety of backgrounds, skill sets, and perspectives.',
+              'At PrairieCare, your opinion counts. We seek and recognize employee feedback to guide our process, and drive better care outcomes for the many communities we serve.',
+            ]
+          }
+        ]
+      each item in items
+        .chessboard__item
+          .chessboard__figure
+            img.chessboard__image(src=item.image)
+          .chessboard__content
+            .chessboard__content-in
+              .chessboard__title
+                | #{item.title}
+              .chessboard__text
+                each string in item.content
+                  p !{string}

@@ -1,0 +1,3 @@
+@function is-touch($state: true) {
+  @return if($state, 'body.is-touch', 'body:not(.is-touch)');
+}

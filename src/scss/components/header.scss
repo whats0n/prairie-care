@@ -1,0 +1,25 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 50px 0;
+
+  @include media($to: 'sm') {
+    padding: 19px 0;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 320px;
+    font-size: 0;
+
+    @include media($to: 'sm') {
+      max-width: 189px;
+    }
+  }
+
+  &__logo-image {
+    width: 100%;
+  }
+}

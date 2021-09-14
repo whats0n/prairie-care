@@ -1,0 +1,31 @@
+body {
+  min-width: 320px;
+  color: var(--text);
+  font-family: var(--font-primary);
+}
+
+.container-fluid {
+  max-width: 1680px;
+}
+
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 1480px;
+
+  @include media($to: 'md') {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include media($to: 'sm') {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container,
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}

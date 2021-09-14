@@ -1,0 +1,42 @@
+.blockquote {
+  padding: 65px 0 55px;
+  background: #6bbeb6;
+
+  @include media($to: 'sm') {
+    padding: 51px 0 45px;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 920px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 44px;
+
+    @include media($to: 'sm') {
+      margin-bottom: 8px;
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  &__meta {
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+
+    @include media($to: 'sm') {
+      font-size: 15px;
+      line-height: 26px;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}

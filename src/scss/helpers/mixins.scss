@@ -1,0 +1,29 @@
+@import 'mixins/hide-scrollbar';
+@import 'mixins/fluid-type';
+@import 'mixins/arrow';
+@import 'mixins/is-touch';
+@import 'mixins/pseudo';
+@import 'mixins/media';
+@import 'mixins/font-face';
+@import 'mixins/column-child-prevent';
+
+@mixin smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin smooth-font {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@mixin textoverflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

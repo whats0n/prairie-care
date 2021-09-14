@@ -1,0 +1,116 @@
+.footer {
+  color: #ffffff;
+  background: #377793;
+
+  &__inner {
+    padding: 60px 0 36px;
+    background: rgba(0, 0, 0, 0.25098);
+
+    @include media($to: 'sm') {
+      padding: 50px 0 43px;
+    }
+  }
+
+  &__row {
+    @include media($from: 'xs') {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -20px;
+    }
+  }
+
+  &__col {
+    @include media($to: 'xs') {
+      text-align: center;
+    }
+
+    @include media($from: 'xs') {
+      padding: 20px;
+    }
+
+    @include media($from: 'xs', $to: 'md') {
+      width: 50%;
+    }
+
+    @include media($from: 'md') {
+      width: 25%;
+    }
+
+    &:not(:last-child) {
+      @include media($to: 'xs') {
+        margin-bottom: 27px;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 20px;
+
+    @include media($to: 'xs') {
+      margin-bottom: 1px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.2816px;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: underline;
+
+    @include hover {
+      text-decoration: none;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: -20px;
+
+    @include media($to: 'xs') {
+      justify-content: center;
+      padding-top: 2px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin: 15px;
+    padding: 5px;
+    width: 30px;
+    font-size: 0;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    margin-top: 56px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+
+    @include media($to: 'xs') {
+      margin-top: 48px;
+    }
+
+    a {
+      display: inline-block;
+      color: inherit;
+      text-decoration: underline;
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@mixin column-child-prevent {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}

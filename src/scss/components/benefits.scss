@@ -1,0 +1,86 @@
+.benefits {
+  padding: 68px 0 55px;
+
+  @include media($to: 'sm') {
+    padding: 53px 0 55px;
+  }
+
+  &__title {
+    margin-bottom: 43px;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 54px;
+    text-align: center;
+
+    @include media($to: 'sm') {
+      margin-bottom: 19px;
+      font-size: 30px;
+      line-height: 44px;
+    }
+  }
+
+  &__row {
+    @include media($from: 'xs') {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -20px;
+    }
+  }
+
+  &__col {
+    @include media($from: 'xs') {
+      padding: 20px;
+    }
+
+    @include media($from: 'xs', $to: 'md') {
+      width: 50%;
+    }
+
+    @include media($from: 'md') {
+      width: 33.33%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+
+    @include media($to: 'sm') {
+      margin-bottom: 6px;
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  &__list {
+    font-size: 16px;
+    line-height: 29px;
+
+    @include media($to: 'sm') {
+      font-size: 15px;
+      line-height: 26px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 18px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 8px;
+      left: 0;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      background: #6bbeb6;
+    }
+  }
+}

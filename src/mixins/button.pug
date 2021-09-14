@@ -1,0 +1,4 @@
+mixin button(text = '', { ui = 'primary', classList = '' } = {})
+  - var _classList = { primary: 'button_primary', secondary: 'button_secondary' }
+  button.button(class=[_classList[ui], classList].join(' '))
+    | #{text}

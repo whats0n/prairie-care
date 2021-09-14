@@ -1,0 +1,21 @@
+.hero
+  .container
+    .hero__inner
+      .hero__primary
+        p.hero__label
+          | Join our team to make a life-changing difference.
+        h1.hero__title
+          strong Build Your
+          em  Psychiatry Career
+          strong  at PrairieCare
+      .hero__figure
+        .hero__figure-in
+          .hero__image-wrap
+            img(src="./images/intro.jpg").hero__image
+      .hero__secondary
+        .hero__text
+          p PrairieCare has immediate positions available for Child and Adolescent Psychiatrists.
+          p Shawna Evans is available to share more details about the position, our team at PrairieCare, and answer any questions you may have.  She can be reached at sevans@prairie-care.com or by calling 651-207-9926.
+        .hero__footer
+          +button('Call Now', { classList: 'hero__button' })
+          +button('Start an Email', { ui: 'secondary', classList: 'hero__button' })

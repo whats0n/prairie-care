@@ -1,0 +1,19 @@
+@import './helpers/variables.scss';
+@import './helpers/functions.scss';
+@import './helpers/mixins.scss';
+
+@import './base/variables.scss';
+@import './base/reset.scss';
+@import './base/common.scss';
+
+@import './components/button.scss';
+
+@import './components/header.scss';
+@import './components/hero.scss';
+@import './components/locations.scss';
+@import './components/chessboard.scss';
+@import './components/reason.scss';
+@import './components/transform.scss';
+@import './components/blockquote.scss';
+@import './components/benefits.scss';
+@import './components/footer.scss';
