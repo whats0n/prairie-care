@@ -70,14 +70,18 @@
   }
 
   &__socials {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin: -20px;
+    overflow: hidden;
 
-    @include media($to: 'xs') {
-      justify-content: center;
-      padding-top: 2px;
+    &-in {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: -20px;
+
+      @include media($to: 'xs') {
+        justify-content: center;
+        padding-top: 2px;
+      }
     }
   }
 
